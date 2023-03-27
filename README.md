@@ -1,6 +1,6 @@
 # Statistical-Arbitrage
 
-Here is my Pairs Trading Library. This implementation is supposed to be a free alternative to the Hudson & Thames Library for Statitical Arbitrage. I hope that this will lead to a profitable Pairs Trading Startegy. But for now this represents a proof of concept using price data of only a few tickers. 
+This is my Pairs Trading Library. This implementation is supposed to be a free alternative to the Hudson & Thames Library for Statitical Arbitrage. I hope that this will lead to a profitable Pairs Trading Startegy. But for now this represents a proof of concept using price data of only a few tickers. 
 
 ### Euclidean Benchmark
 We start with the simplest of all pairs trading strategies, which is calculating the Euclidean Distance between normalised price data of assets to form pairs based on the smallest distances. I will later combine this with a Minimum Profit Optimiation strategy that will tll us when to open our position and when to close. 
@@ -30,5 +30,5 @@ The top $n$ pairs that had the highest number of zero crossings during the forma
 **3. Pairs with a higher historical standard deviation**
 Select top $n$ pairs with the highest variance of the spread.
 
-All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py```(Also see: ```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs with smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
+All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py``` (Also see: ```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs with smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
 
