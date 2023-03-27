@@ -21,7 +21,7 @@ b. Short for the element with a higher price in a portfolio
 
 Most commonly used threshhold is Bollinger Bands i.e., usually 2 standard deviations.
 
-**Alternative Metrics for Pair Selection**
+#### Alternative Metrics for Pair Selection
 **1. Pairs within the same industry group**
 By calculating the Euclidean square distance for each of the pair within the same group, the $n$ closest pairs are selected.
 
