@@ -12,4 +12,4 @@ This is done in order to bring the price data of each asset to the same scale.
 
 **STEP 2: Calculate Sum of Squared Distances**
 Using Euclidean squared distance on the normalized price time series, $n$ closest pairs of assets are picked.
-$$\text{SSD}=\Sum^{N}_{1}{(P_{t}^{1}-P_{t}^{2})^{2}}$$
+$$\text{SSD}=\Sum_{1}^{N}{(P_{t}^{1}-P_{t}^{2})^{2}}$$
