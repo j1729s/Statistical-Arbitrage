@@ -30,5 +30,5 @@ The top $n$ pairs that had the highest number of zero crossings during the forma
 **3. Pairs with a higher historical standard deviation**
 Select top $n$ pairs with the highest variance of the spread.
 
-All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py```(```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs with smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
+All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py```(Also see: ```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs with smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
 
