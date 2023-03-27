@@ -10,10 +10,11 @@ $$P_{\text{norm}}=\frac{P-\text{min}(P)}{\text{max}(P)-\text{min}(P)}$$
 This is done in order to bring the price data of each asset to the same scale. 
 
 **STEP 2: Calculate Sum of Squared Distances**
-Using Euclidean squared distance on the normalized price time series, $n$ closest pairs of assets are picked.
 $$\text{SSD}=\Sigma_{t=1}^{N}{(P_{t}^{1}-P_{t}^{2})^{2}}$$
+Using Euclidean squared distance on the normalized price time series, $n$ closest pairs of assets are picked.
 
 **STEP 3: Create Strategy for Entry and Exit**
+
 If the difference between the price of elements in a pair diverged by more than a threshold, the positions are opened
 a. Long for the element with a lower price in a portfolio
 b. Short for the element with a higher price in a portfolio
@@ -25,7 +26,7 @@ Most commonly used threshhold is Bollinger Bands i.e., usually 2 standard deviat
 By calculating the Euclidean square distance for each of the pair within the same group, the $n$ closest pairs are selected.
 
 **2. Pairs with a higher number of zero-crossings**
-The top $n$ pairs that had the highest number of zero crossings during the formation period are admitted to the portfolio we select
+The top $n$ pairs that had the highest number of zero crossings during the formation period are admitted to the portfolio we select.
 
 **3. Pairs with a higher historical standard deviation**
 Select top $n$ pairs with the highest variance of the spread.
