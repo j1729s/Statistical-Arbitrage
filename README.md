@@ -12,7 +12,7 @@ This is done in order to bring the price data of each asset to the same scale.
 
 **STEP 2: Calculate Sum of Squared Distances**
 Using Euclidean squared distance on the normalized price time series, $n$ closest pairs of assets are picked.
-$$\text{SSD}=\Sigma_{1}^{N}{(P_{t}^{1}-P_{t}^{2})^{2}}$$
+$$\text{SSD}=\Sigma_{t=1}^{N}{(P_{t}^{1}-P_{t}^{2})^{2}}$$
 
 **STEP 3: Create Strategy for Entry and Exit**
 If the difference between the price of elements in a pair diverged by more than a threshold, the positions are opened
