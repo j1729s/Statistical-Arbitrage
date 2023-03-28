@@ -16,7 +16,9 @@ Using Euclidean squared distance on the normalized price time series, $n$ closes
 **STEP 3: Create Strategy for Entry and Exit**
 
 If the difference between the price of elements in a pair diverged by more than a threshold, the positions are opened
+
 a. Long for the element with a lower price in a portfolio
+
 b. Short for the element with a higher price in a portfolio
 
 Most commonly used threshhold is Bollinger Bands i.e., usually 2 standard deviations.
