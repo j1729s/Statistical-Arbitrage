@@ -38,3 +38,14 @@ Select top $n$ pairs with the highest variance of the spread.
 
 All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py``` (Also see: ```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs that have smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
 
+### Cointegration
+The word “integration” refers to an integrated time series of order $d$, denoted by $I(d)$. According to Alexander et al. (Alexander, 2002), price, rate, and yield data can be assumed as $I(1)$ series, while returns (obtained by differencing the price) can be assumed as $I(0)$ series. The most important property of the $I(0)$ series that is relevant to statistical arbitrage is the following:
+
+$I(0)$ series are **weak-sense stationary**
+Weak-sense stationarity implies that the mean and the variance of the time series are finite and do not change with time.
+
+But wait, the $I(0)$ series is the returns: we cannot trade the returns! Only the price is tradable, yet the price is an $I(1)$ series, which are not stationary. We cannot make use of the stationary property of the $I(0)$ series by trading one asset.
+
+What about two assets? According to the definition of cointegration (Alexander, 2002):
+
+$x_t and y_t \text{are cointegrated}, if x_t and y_t are I(1) series and \exists \beta such that z_t = x_t - \beta y_t is an I(0) series$
