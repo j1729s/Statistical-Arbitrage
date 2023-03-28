@@ -23,12 +23,15 @@ Most commonly used threshhold is Bollinger Bands i.e., usually 2 standard deviat
 
 #### Alternative Metrics for Pair Selection
 **1. Pairs within the same industry group**
+
 By calculating the Euclidean square distance for each of the pair within the same group, the $n$ closest pairs are selected.
 
 **2. Pairs with a higher number of zero-crossings**
+
 The top $n$ pairs that had the highest number of zero crossings during the formation period are admitted to the portfolio we select.
 
 **3. Pairs with a higher historical standard deviation**
+
 Select top $n$ pairs with the highest variance of the spread.
 
 All of the above approches have been implemented as functions in ```Euclidean_Benchmark.py``` (Also see: ```Euclidean_Test.ipynb```). Working with price data for stocks in the same industry, I would like to combine, pairs that have smallest distances, higher number of zero crossings and higher spread variance, with a Minimum Profit Optimisation Entry-Exit Strategy. This would be my Benchmark Strategy.
