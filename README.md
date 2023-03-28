@@ -41,7 +41,8 @@ All of the above approches have been implemented as functions in ```Euclidean_Be
 ### Cointegration
 The word “integration” refers to an integrated time series of order $d$, denoted by $I(d)$. According to Alexander et al. (Alexander, 2002), price, rate, and yield data can be assumed as $I(1)$ series, while returns (obtained by differencing the price) can be assumed as $I(0)$ series. The most important property of the $I(0)$ series that is relevant to statistical arbitrage is the following:
 
-$I(0)$ series are **weak-sense stationary**
+$I(0)$ series are **weak-sense stationary**.
+
 Weak-sense stationarity implies that the mean and the variance of the time series are finite and do not change with time.
 
 But wait, the $I(0)$ series is the returns: we cannot trade the returns! Only the price is tradable, yet the price is an $I(1)$ series, which are not stationary. We cannot make use of the stationary property of the $I(0)$ series by trading one asset.
@@ -49,3 +50,23 @@ But wait, the $I(0)$ series is the returns: we cannot trade the returns! Only th
 What about two assets? According to the definition of cointegration (Alexander, 2002):
 
 $x_{t} \text{ and } y_{t} \text{ are cointegrated}, \text{ if } x_{t} \text{ and } y_{t} \text{ are } I(1) \text{ series and }\exists \beta \text{ such that }z_{t} = x_{t} - \beta y_{t} \text{ is an }I(0) \text{ series}$
+
+Cointegration allows us to construct a stationary time series from two asset price series, if only we can find the magic weight, or more formally, the cointegration coefficient $\beta$. Then we can apply a mean-reversion strategy to trade both assets at the same time weighted by \beta. There is no guarantee that such $\beta$ always exists, and you should look for other asset pairs if no such $\beta$ can be found.
+
+**Correlation vs. Cointegration**
+1. Correlation has no well-defined relationship with cointegration. Cointegrated series might have low correlation, and highly correlated series might not be cointegrated at all.
+2. Correlation describes a short-term relationship between the returns.
+3. Cointegration describes a long-term relationship between the prices.
+
+#### Derivation of the cointegration coefficient $\beta$
+The two workhorses of finding the cointegration coefficient \beta (or cointegration vector when there are more than 2 assets) are the Engle-Granger test (Engle, 1987) and the Johansen test.
+
+**1. Engle-Granger Test**
+The idea of Engle-Granger test is simple. We perform a linear regression between the two asset prices and check if the residual is stationary using the Augmented Dick-Fuller (ADF) test. If the residual is stationary, then the two asset prices are cointegrated. The cointegration coefficient is obtained as the coefficient of the regressor.
+
+An immediate problem is in front of us. Which asset should we choose as the dependent variable? A feasible heuristic is that we run the linear regression twice using each asset as the dependent variable, respectively. The final $\beta$ would be the combination that yields a more significant ADF test.
+
+**2. Johansen Test**
+Johansen test uses the VECM to find the cointegration coefficient/vector $\beta$. The most important improvement of Johansen Test compared to Engle-Granger test is that it treats every asset as an independent variable. Johansen test also provides two test statistics, eigenvalue statistics and trace statistics, to determine if the asset prices are statistically significantly cointegrated.
+
+In conclusion, Johansen test is a more versatile method of finding the cointegration coefficient/vector $\beta$ than the Engle-Granger test.
