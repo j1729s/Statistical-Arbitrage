@@ -48,4 +48,4 @@ But wait, the $I(0)$ series is the returns: we cannot trade the returns! Only th
 
 What about two assets? According to the definition of cointegration (Alexander, 2002):
 
-$x_t and y_t \text{are cointegrated}, if x_t and y_t are I(1) series and \exists \beta such that z_t = x_t - \beta y_t is an I(0) series$
+$x_{t} \text{ and } y_{t} \text{ are cointegrated}, \text{ if } x_{t} \text{ and } y_{t} \text{ are } I(1) \text{ series and }\exists \beta \text{ such that }z_{t} = x_{t} - \beta y_{t} \text{ is an }I(0) \text{ series}$
