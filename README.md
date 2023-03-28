@@ -61,12 +61,14 @@ Cointegration allows us to construct a stationary time series from two asset pri
 #### Derivation of the cointegration coefficient $\beta$
 The two workhorses of finding the cointegration coefficient \beta (or cointegration vector when there are more than 2 assets) are the Engle-Granger test (Engle, 1987) and the Johansen test.
 
-**1. Engle-Granger Test**
+**Engle-Granger Test**
+
 The idea of Engle-Granger test is simple. We perform a linear regression between the two asset prices and check if the residual is stationary using the Augmented Dick-Fuller (ADF) test. If the residual is stationary, then the two asset prices are cointegrated. The cointegration coefficient is obtained as the coefficient of the regressor.
 
 An immediate problem is in front of us. Which asset should we choose as the dependent variable? A feasible heuristic is that we run the linear regression twice using each asset as the dependent variable, respectively. The final $\beta$ would be the combination that yields a more significant ADF test.
 
-**2. Johansen Test**
+**Johansen Test**
+
 Johansen test uses the VECM to find the cointegration coefficient/vector $\beta$. The most important improvement of Johansen Test compared to Engle-Granger test is that it treats every asset as an independent variable. Johansen test also provides two test statistics, eigenvalue statistics and trace statistics, to determine if the asset prices are statistically significantly cointegrated.
 
 In conclusion, Johansen test is a more versatile method of finding the cointegration coefficient/vector $\beta$ than the Engle-Granger test.
