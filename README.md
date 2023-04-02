@@ -73,4 +73,5 @@ Johansen test uses the VECM to find the cointegration coefficient/vector $\beta$
 
 In conclusion, Johansen test is a more versatile method of finding the cointegration coefficient/vector $\beta$ than the Engle-Granger test.
 
-All of the above approches have been implemented as functions in ```Cointegration_coeeficient_tests.py```,```Traditional_Partner_Selection.py```,```jtest.py``` (Also see: ```Cointegration_Test.ipynb```)
+All of the above approches have been implemented as functions in ```Cointegration_coeeficient_tests.py```, ```Traditional_Partner_Selection.py```, ```jtest.py``` 
+(Also see: ```Cointegration_Test.ipynb```) 
